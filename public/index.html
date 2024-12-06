@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAZO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+      }
+      .container {
+        text-align: center;
+        z-index: 2;
+        color: white;
+        position: relative;
+      }
+      #quizContainer {
+        display: none;
+      }
+      #progressBar {
+        width: 100%;
+        height: 10px;
+        background-color: #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 10px;
+      }
+      #progressFill {
+        height: 100%;
+        width: 0%;
+        background-color: #4caf50;
+        transition: width 0.1s linear;
+      }
+      /* Style pour l'icône Spotify */
+      .spotify-link {
+        position: fixed;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+        padding: 10px 20px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+        z-index: 10;
+      }
+
+      .spotify-link a {
+        text-decoration: none;
+        color: #1db954; /* Couleur verte de Spotify */
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+
+      .spotify-link a:hover {
+        color: #1ed760; /* Vert plus clair pour effet hover */
+      }
+
+      .spotify-link img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+      /* Crédit développeur */
+      .developer-credit {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        z-index: 10;
+      }
+
+      .developer-credit a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .developer-credit a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="loginButton">Start</button>
+      <div id="infoMessage">
+        Get a score of 8 to unlock the code and come on tour with me
+      </div>
+      <div id="quizContainer">
+        <!-- Barre de progression -->
+        <div id="progressBar">
+          <div id="progressFill"></div>
+        </div>
+        <!-- Temps restant -->
+        <div id="timeRemaining">Time remaining: 02:00</div>
+        <p id="question">Guess the title!</p>
+        <input type="text" id="answerInput" placeholder="Your answer" />
+        <button id="submitAnswer">Submit</button>
+        <p id="score">Score: 0</p>
+        <div id="secretCodeContainer" style="display: none">
+          <p id="secretCode"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p class="footer-text">
+        Developed by
+        <a href="https://www.instagram.com/jsos_tgs/" target="_blank"
+          >Nathan Lubino</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Lien Spotify de l'artiste -->
+    <div class="spotify-link">
+      <a
+        href="https://open.spotify.com/artist/5gqmbbfjcikQBzPB5Hv13I?si=9ceM059uTOygF3RCt_kJHA"
+        target="_blank"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+          alt="Spotify Logo"
+        />
+        GAZO
+      </a>
+    </div>
+  </body>
+</html>
