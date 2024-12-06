@@ -1,0 +1,155 @@
+/* Style global */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #000000; /* Fond noir */
+  color: #ffffff; /* Texte blanc */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: url("https://cdn.glitch.global/f9c97d8f-d33e-4132-9fe4-f58a4057462b/gazocard.PNG?v=1733503298094")
+    no-repeat center center; /* Image centrée */
+  background-size: cover; /* L'image couvre tout le conteneur */
+  border-radius: 15px; /* Coins arrondis */
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3); /* Ombre subtile */
+  color: #ffffff; /* Texte blanc */
+  text-align: center;
+}
+
+/* Titre du quiz */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f5f5f5; /* Texte blanc brillant chromé */
+  text-shadow: 0 4px 8px rgba(245, 245, 245, 0.5); /* Effet lumineux */
+}
+
+/* Boutons */
+button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2); /* Fond transparent */
+  color: #ffffff; /* Texte blanc */
+  border: 1px solid #f5f5f5; /* Bordure blanc brillant chromé */
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: rgba(
+    245,
+    245,
+    245,
+    0.5
+  ); /* Fond blanc brillant chromé au survol */
+  transform: translateY(-2px); /* Léger effet de levée */
+}
+
+button:active {
+  transform: translateY(0); /* Retire l'effet de levée */
+}
+
+/* Zone du quiz */
+#quizContainer {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Ombre subtile */
+}
+
+/* Champ de texte */
+input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #f5f5f5; /* Bordure blanc brillant chromé */
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+  color: #ffffff; /* Texte blanc */
+  font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+  color: #aaaaaa; /* Texte d'indication gris clair */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #f5f5f5; /* Bordure blanc brillant chromé au focus */
+}
+
+/* Lecteur audio */
+audio {
+  margin: 20px 0;
+  width: 100%;
+}
+
+/* Timer */
+#timer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f5f5f5; /* Texte blanc brillant chromé */
+  text-shadow: 0 2px 4px rgba(245, 245, 245, 0.5); /* Effet lumineux */
+  margin-bottom: 20px;
+}
+
+/* Score */
+#score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Conteneur pour le code secret */
+#secretCodeContainer {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+  color: #f5f5f5; /* Texte blanc brillant chromé */
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(245, 245, 245, 0.5); /* Effet lumineux */
+}
+
+/* Message d'information */
+#infoMessage {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f5f5f5; /* Texte blanc brillant chromé */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: auto; /* Positionne le footer en bas */
+  background-color: #000000; /* Fond noir */
+  padding: 10px;
+  text-align: center;
+  color: #ffffff; /* Texte blanc */
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #f5f5f5; /* Lien blanc brillant chromé */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
